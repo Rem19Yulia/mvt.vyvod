@@ -24,4 +24,5 @@ urlpatterns = [
     path('cart/', views.cart, name='cart'),
     path('games/', views.games_view, name='games_view'),
     path('django_sign_up/', views.sign_up_by_django, name='sign_up_by_django'),
+    path('platform/news/', views.news_view, name='news'),
 ]
