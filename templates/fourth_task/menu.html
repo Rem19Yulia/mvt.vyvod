@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Default Title{% endblock %}</title>
+</head>
+<body>
+    <h1>{% block header %}Default Title{% endblock %}</h1>  <!-- Название страницы -->
+
+    <!-- Главное меню -->
+    <div id="menu">
+        <ul>
+            <li><a href="{% url 'index' %}">Главная</a></li>
+            <li><a href="{% url 'shop' %}">Магазин</a></li>
+            <li><a href="{% url 'cart' %}">Корзина</a></li>
+            <li><a href="{% url 'sign_up_by_django' %}">Зарегистрироваться</a></li>
+        </ul>
+    </div>
+
+    <!-- Контент страницы -->
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

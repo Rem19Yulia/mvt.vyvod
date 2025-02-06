@@ -1,0 +1,10 @@
+{% extends 'fourth_task/menu.html' %}
+
+{% block title %}Корзина{% endblock %}
+{% block header %}Корзина{% endblock %}
+
+{% block content %}
+    <p>Здесь вы можете просмотреть выбранные товары.</p>
+    <p>Добавьте сюда свои идеи о том, что вы хотите видеть в корзине.</p>
+    <a href="{% url 'index' %}">Вернуться на главную страницу</a>
+{% endblock %}

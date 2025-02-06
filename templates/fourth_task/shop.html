@@ -1,0 +1,21 @@
+{% extends 'fourth_task/menu.html' %}
+
+{% block title %}Магазин{% endblock %}
+{% block header %}Магазин{% endblock %}
+
+{% block content %}
+    <ul>
+        {% for item in items %}
+            <li>
+                <strong>{{ item.name }}</strong> | {{ item.description }}.
+                <br>Стоимость: {{ item.price }} руб.
+                <button>Мне это нужно</button>
+            </li>
+        {% empty %}
+            <li>Товары отсутствуют.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'index' %}">Вернуться на главную страницу</a>
+{% endblock %}
+
+
