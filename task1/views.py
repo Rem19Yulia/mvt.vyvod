@@ -60,6 +60,6 @@ def news_view(request):
     page_number = request.GET.get('page')
     news = paginator.get_page(page_number)
 
-    return render(request, 'news.html', {'news': news})
+    return render(request, 'fourth_task/news.html', {'news': news})
 
 
